@@ -6,11 +6,11 @@ require 'fraction/version'
 Gem::Specification.new do |spec|
   spec.name          = "fraction"
   spec.version       = Fraction::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["adler.jakub"]
+  spec.authors       = ['Jakub Adler']
+  spec.email         = ['adler.jakub@domain.com']
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Fraction arithmetics}
+  spec.description   = %q{Provides interface for fraction calculation}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
