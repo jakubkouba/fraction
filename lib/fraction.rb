@@ -11,6 +11,6 @@ class Fraction
   end
 
   def +(other)
-    Fraction.new(@numerator + other.numerator, 3)
+    Fraction.new(@numerator + other.numerator, @denominator)
   end
 end
