@@ -25,5 +25,13 @@ describe Fraction do
         expect(sum).to eq 1
       end
     end
+
+    describe '1 + 1' do
+      it 'equals 2' do
+        sum = Fraction.new(1, 1) + Fraction.new(1, 1)
+
+        expect(sum).to eq 2
+      end
+    end
   end
 end
