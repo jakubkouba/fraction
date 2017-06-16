@@ -3,13 +3,14 @@ require 'byebug'
 
 class Fraction
 
-  attr_reader :numerator
+  attr_reader :numerator, :denominator
 
   def initialize(numerator, denominator)
     @numerator = numerator
+    @denominator = denominator
   end
 
   def +(other)
-    @numerator + other.numerator
+    Fraction.new(@numerator + other.numerator, 3)
   end
 end
