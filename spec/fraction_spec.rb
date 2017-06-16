@@ -36,12 +36,20 @@ describe Fraction do
 
     describe '1/3 + 1/3' do
       it 'equals 2/3' do
-        sum = Fraction.new(1,3) + Fraction.new(1, 3)
+        sum = Fraction.new(1, 3) + Fraction.new(1, 3)
 
         expect(sum.numerator).to eq 2
         expect(sum.denominator).to eq 3
       end
+    end
 
+    describe '1/5 + 2/5' do
+      it 'equals 3/5' do
+        sum = Fraction.new(1, 5) + Fraction.new(2, 5)
+
+        expect(sum.numerator).to eq 3
+        expect(sum.denominator).to eq 5
+      end
     end
   end
 end
