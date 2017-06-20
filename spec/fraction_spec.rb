@@ -60,5 +60,14 @@ describe Fraction do
         expect(sum.denominator).to eq 12
       end
     end
+
+    describe '1/12 + 1/3' do
+      it 'equals 5/12' do
+        sum = Fraction.new(1, 12) + Fraction.new(1, 3)
+
+        expect(sum.numerator).to eq 5
+        expect(sum.denominator).to eq 12
+      end
+    end
   end
 end

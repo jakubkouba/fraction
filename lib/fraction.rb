@@ -11,8 +11,16 @@ class Fraction
   end
 
   def +(other)
-    multiple = other.denominator / @denominator
-    numerator = (@numerator * multiple) + other.numerator
-    Fraction.new(numerator, other.denominator)
+    if other.denominator > @denominator
+      multiple = other.denominator / @denominator
+      numerator = (@numerator * multiple) + other.numerator
+    else
+      multiple = @denominator / other.denominator
+      numerator = (other.numerator * multiple) + @numerator
+    end
+
+    denominator = [@denominator, other.denominator].max
+
+    Fraction.new(numerator, denominator)
   end
 end
