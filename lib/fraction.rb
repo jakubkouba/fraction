@@ -11,22 +11,9 @@ class Fraction
   end
 
   def +(other)
-    numerator = new_numerator(other)
-    denominator = [@denominator, other.denominator].max
+    lcm = denominator.lcm(other.denominator)
+    new_numerator = ((lcm / denominator) * numerator) + ((lcm / other.denominator) * other.numerator)
 
-    Fraction.new(numerator, denominator)
-  end
-
-  private
-
-  def new_numerator(other)
-    if @denominator > other.denominator
-      multiple  = @denominator / other.denominator
-      numerator = (other.numerator * multiple) + @numerator
-    else
-      multiple  = other.denominator / @denominator
-      numerator = (@numerator * multiple) + other.numerator
-    end
-    numerator
+    Fraction.new(new_numerator, lcm)
   end
 end
