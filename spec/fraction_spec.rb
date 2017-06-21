@@ -61,12 +61,12 @@ describe Fraction do
       end
     end
 
-    describe '1/2 + 1/2' do
-      it 'equals 2/2' do
-        sum = Fraction.new(1, 2) + Fraction.new(1, 2)
+    describe '1/2 + 1/4' do
+      it 'equals 3/4' do
+        sum = Fraction.new(1, 2) + Fraction.new(1, 4)
 
-        expect(sum.numerator).to eq 2
-        expect(sum.denominator).to eq 2
+        expect(sum.numerator).to eq 3
+        expect(sum.denominator).to eq 4
       end
     end
   end
