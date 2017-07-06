@@ -108,5 +108,14 @@ describe Fraction do
         expect(sum.denominator).to eq 1
       end
     end
+
+    describe '0 - 1' do
+      it 'equals - 1' do
+        sum = Fraction.new(0, 1) - Fraction.new(1, 1)
+
+        expect(sum.numerator).to eq -1
+        expect(sum.denominator).to eq 1
+      end
+    end
   end
 end
