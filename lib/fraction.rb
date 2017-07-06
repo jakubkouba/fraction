@@ -11,9 +11,15 @@ class Fraction
   end
 
   def +(other)
-    lcm = denominator.lcm(other.denominator)
-    new_numerator = ((lcm / denominator) * numerator) + ((lcm / other.denominator) * other.numerator)
+    new_denominator = denominator.lcm(other.denominator)
+    new_numerator = ((new_denominator / denominator) * numerator) + ((new_denominator / other.denominator) * other.numerator)
 
-    Fraction.new(new_numerator, lcm)
+    gcm = new_numerator.gcd(new_denominator)
+    if gcm > 1
+      new_numerator /= gcm
+      new_denominator /= gcm
+    end
+
+    Fraction.new(new_numerator, new_denominator)
   end
 end
