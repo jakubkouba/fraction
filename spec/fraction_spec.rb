@@ -87,5 +87,14 @@ describe Fraction do
         expect(sum.denominator).to eq 1
       end
     end
+
+    describe '1/4 + 1/4' do
+      it 'equals 1/2' do
+        sum = Fraction.new(1, 4) + Fraction.new(1, 4)
+
+        expect(sum.numerator).to eq 1
+        expect(sum.denominator).to eq 2
+      end
+    end
   end
 end
