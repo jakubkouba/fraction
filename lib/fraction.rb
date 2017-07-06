@@ -28,6 +28,9 @@ class Fraction
   end
 
   def *(other)
-    @numerator * other.numerator
+    new_numerator = @numerator * other.numerator
+    new_denominator = @denominator * other.denominator
+
+    Fraction.new(new_numerator, new_denominator)
   end
 end

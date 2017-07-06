@@ -125,7 +125,9 @@ describe Fraction do
       it 'equals 1' do
         sum = Fraction.new(1, 1) * Fraction.new(1, 1)
 
-        expect(sum).to eq 1
+        expect(sum.numerator).to eq 1
+        expect(sum.denominator).to eq 1
+
       end
     end
 
@@ -133,7 +135,17 @@ describe Fraction do
       it 'equals 0' do
         sum = Fraction.new(0, 1) * Fraction.new(1, 1)
 
-        expect(sum).to eq 0
+        expect(sum.numerator).to eq 0
+        expect(sum.denominator).to eq 1
+      end
+    end
+
+    describe '1/2 * 1/4' do
+      it 'equals 1/6' do
+        sum = Fraction.new(1, 2) * Fraction.new(1, 4)
+
+        expect(sum.numerator).to eq 1
+        expect(sum.denominator).to eq 8
       end
     end
   end
