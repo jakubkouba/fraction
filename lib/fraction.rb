@@ -22,4 +22,8 @@ class Fraction
 
     Fraction.new(new_numerator, new_denominator)
   end
+
+  def -(other)
+    @numerator - other.numerator
+  end
 end
