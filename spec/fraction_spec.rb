@@ -118,4 +118,16 @@ describe Fraction do
       end
     end
   end
+
+  describe 'Multiplying' do
+
+    describe '1 * 1' do
+      it 'equals 1' do
+        sum = Fraction.new(1, 1) * Fraction.new(1, 1)
+
+        expect(sum).to eq 1
+      end
+    end
+
+  end
 end
