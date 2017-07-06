@@ -129,5 +129,12 @@ describe Fraction do
       end
     end
 
+    describe '0 * 1' do
+      it 'equals 0' do
+        sum = Fraction.new(0, 1) * Fraction.new(1, 1)
+
+        expect(sum).to eq 0
+      end
+    end
   end
 end

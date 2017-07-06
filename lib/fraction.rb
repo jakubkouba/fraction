@@ -28,6 +28,6 @@ class Fraction
   end
 
   def *(other)
-    @numerator
+    @numerator * other.numerator
   end
 end
