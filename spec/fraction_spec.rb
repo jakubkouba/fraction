@@ -141,7 +141,7 @@ describe Fraction do
     end
 
     describe '1/2 * 1/4' do
-      it 'equals 1/6' do
+      it 'equals 1/8' do
         sum = Fraction.new(1, 2) * Fraction.new(1, 4)
 
         expect(sum.numerator).to eq 1
